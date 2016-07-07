@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Ebazaar_JSF_forstudents">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="Ebazaar_JSF_forstudents"/>
+        <property name="java-output-path" value="/Ebazaar_JSF_forstudents/build/classes"/>
+    </wb-module>
+</project-modules>

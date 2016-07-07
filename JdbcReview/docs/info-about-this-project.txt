@@ -1,0 +1,8 @@
+The sample code in this project uses
+JavaDB. You can use the code here as
+a reminder of syntax, or, if you want
+to run it, instructions for setting
+up JavaDB and the Customer table
+that the code uses can be found
+in the setup\javadb directory for
+this course.

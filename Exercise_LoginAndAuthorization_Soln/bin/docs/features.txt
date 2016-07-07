@@ -1,0 +1,30 @@
+Techniques Used in This Solution
+
+A. To support the idea of having a central controller, all event
+   handlers have been placed in the Control class.
+
+B. Navigation is handled centrally by Control.
+
+C. GenericWindow interface permits you to do the following
+   0. Simulate multiple inheritance by providing default behavior for several methods
+   1. Set up a fully typed map for storing access control information screen by screen
+   2. Control all windows in a loop (as in hideAll() ).
+   3. Display info and error messages in a uniform way (this is used
+      to display messages in the Start and Login screens)
+   4. Generically initialize a target window in case it has not been initialized
+   5. Store user's target window generically, as part of the "user state"
+
+D. Single sign-in. This is accomplished by caching in Control the fact that
+   the user has logged in (in an instance of a static nested class UserState). 
+   Since this data is stored in a static instance,
+   it will not be removed from memory by the garbage collector. A solution
+   for a web application would be to store the fact that the user has logged in
+   as session data.
+
+E. Authorization. This is accomplished by storing Authorization level of the user in the
+   Control's static nested class UserState, and also by maintaining in Control
+   a map that associates to each window the authorization level required to access it.
+
+F. Next Window Memory. When user attempts to go to a window that requires login,
+   but user has not logged in, the intended target window is stored in UserState, 
+   to be retrieved by Control after login has been successful. 

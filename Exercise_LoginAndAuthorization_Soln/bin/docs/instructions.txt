@@ -1,0 +1,33 @@
+Refactor the code provided here to support
+single sign-on and proper authorization levels.
+Your solution should guarantee the following:
+
+1. Any user can access screens Public1, Public2, Login
+2. Users with id = 1 or id = 2 who have logged in may
+access Public1, Public2, Login, and Private
+3. Users with id = 2 who have logged in may access
+all screens.
+4. After a user logs out, he may access only Public1, Public 2, Login
+5. Once a user logs in, he may access any of the windows
+he is authorized to view without logging in again (this is "single sign-on")
+6. Whenever a user attempts to login using the Login window, and 
+login is not successful, a message should be shown at the bottom
+of the login window -- in red -- stating "Login failed"
+7. If a user has chosen the "login" option from anywhere in the application,
+the Login window should be displayed. If his attempt to login is successful,
+a message should be shown at the bottom of the login window -- in green --
+stating "Login successful".
+8. If a user who has not logged in attempts to access 
+Private, the Login window should be displayed. If login is successful,
+the Private window should be displayed. 
+9. If a user who has not logged in attempts to access AdminOnly,
+the Login window should be displayed. If login is successful and the
+login name is "2", the AdminOnly window should be displayed. If the
+login name is "1" and password is "1", a message, in red, stating
+"Not authorized" should be displayed on the Login window. 
+
+
+Note: Here are the logins for this application:
+  userid = 1   password = 1
+  userid = 2   password = 2
+  

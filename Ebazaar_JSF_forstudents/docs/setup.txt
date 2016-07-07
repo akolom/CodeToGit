@@ -1,0 +1,27 @@
+How to set this project up in another workspace
+
+0. This project uses the usual MySql database config -- just get MySql server running (you 
+don't need to think about adding MySql as a datasource in glassfish)
+
+1. Make sure latest version of glassfish is installed. Instructions for 5/2016
+are in setup folder for this course
+
+2. Create an empty dynamic web project -- as you go through the wizard,
+you need to add one thing -- support for jsf2.2
+
+3. Copy Java src packages directly into the Java Resources src folder
+
+4. In WebContent:
+  a. Copy the xhtml files directly
+  b. copy the resources folder to the top level
+  c. WEB-INF:  copy beans.xml, context.xml, and update web.xml with the last two tags of the file
+  (most importantly, these tell JSF to use the index.xhtml as a welcome file)
+ 
+5. jar files
+  a. for compiling, you need to add these to the project as external jars in the usual way
+  b. for deployment, you need to add these to WEB-INF/lib
+
+6. You should be able to run it by right clicking on the project and "run on server" 
+-- it won't look very good in the internal browser
+
+7. copy the url into an external browser -- should look good

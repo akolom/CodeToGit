@@ -1,0 +1,28 @@
+This is the same project as 
+ArchAnFX, with Address rules
+implemented, and inline
+comments about implementing
+Quantity rules.
+
+To make rule-checking possible, 
+Jess rules have been added in a folder "rules",
+at the top level of src directory.
+Referencing this rules folder inside
+the ShippingBillingWindow "checkout" handler 
+is not done in
+a production-friendly way (the path explicitly
+refers to the src folder, which won't be present in
+the production version).
+
+Also, for rules, AddressBean and RuleException have
+been added to the business package.
+
+In the real project, the Address class will be replaced
+by an implemented Address interface obtained from
+the Customer Subsystem, and this is what will be 
+inserted into the AddressBean.
+
+JAR FILES: These external jars have been added:
+ - jess.jar
+ - rulesengine.jar
+ - rulesencoding.jar

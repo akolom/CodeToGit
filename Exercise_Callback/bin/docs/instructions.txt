@@ -1,0 +1,21 @@
+This application supports login, but does not
+protect the Remarks and Grades screens properly.
+If a user is not logged in, he can still
+access those screens. The code must be refactored
+so that if a user tries to access those screens
+but is not logged in, then he is taken to the
+Login screen. Then, after successful login,
+the system should take him to the requested
+screen (Remarks or Grades), which will provide
+the expected data. Note that when this happens,
+the Remarks screen (or Grades screen) should
+be populated with data (the TextArea should not be 
+empty).
+
+Important: In creating a solution, you are looking
+for a good design. There are several ways to accomplish 
+this, but for this exercise, aim for minimal coupling
+between the Control class and the UI classes. 
+
+Pre-requisite: You should have completed Exercise_LoginAndAuthorization
+before attempting this exercise.
